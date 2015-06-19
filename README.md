@@ -1,5 +1,6 @@
-# Metal-CommandLine-Sample-
-A sample command line app for compute command of Metal, written in Swift
+# Metal-CommandLine-Sample-Swift
+
+A sample command line app for compute command of Metal, written in Swift.
 
 
 ## Compile and Usage
