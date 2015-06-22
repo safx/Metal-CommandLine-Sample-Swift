@@ -25,7 +25,7 @@ func createImage(texture: MTLTexture) -> CGImage? {
     let height = texture.height
     let rowBytes = width * 4
 
-    var buf = Array<UInt8>(count: rowBytes * height * 4, repeatedValue: 0)
+    var buf = Array<UInt8>(count: rowBytes * height, repeatedValue: 0)
     let region = MTLRegionMake2D(0, 0, width, height)
     texture.getBytes(&buf, bytesPerRow: rowBytes, fromRegion: region, mipmapLevel: 0)
 
