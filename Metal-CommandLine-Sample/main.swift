@@ -49,7 +49,7 @@ func grayScale(url: NSURL) throws -> MTLTexture {
     let pipelineState = try! device.newComputePipelineStateWithFunction(kernel)
 
     let loader = MTKTextureLoader(device: device)
-    let inTexture = try! loader.textureWithContentsOfURL(url, options: nil)
+    let inTexture = try! loader.newTextureWithContentsOfURL(url, options: nil)
     let width  = inTexture.width
     let height = inTexture.height
     let outTexture = createEmptyTexture(device, width: width, height: height)
