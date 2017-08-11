@@ -2,23 +2,7 @@ import Cocoa
 import Metal
 import MetalKit
 
-struct Processor {
-    /// List of possible errors thrown my the static functions.
-    enum Error: Swift.Error {
-        case failedToCreateMetalDevice
-        case failedToCreateMetalLibrary(device: MTLDevice)
-        case failedToCreateMetalFunction(device: MTLDevice, name: String)
-        case failedToCreateMetalTexture(device: MTLDevice, descriptor: MTLTextureDescriptor)
-        
-        case failedToCreateMetalQueue(device: MTLDevice)
-        case failedToCreateMetalCommandBuffer(device: MTLDevice)
-        case failedToCreateMetalEncoder(device: MTLDevice)
-        
-        case failedToGeneratePNGImage(representation: NSBitmapImageRep)
-        case failedToCreateCGContext
-        case failedToCreateCGImage
-    }
-    
+enum Processor {
     /// Make a gray scale image Metal Texture from a file.
     static func makeGrayScaleTexture(from fileURL: URL) throws -> MTLTexture {
         // Create the *non-transient* metal objects.
@@ -83,5 +67,23 @@ struct Processor {
         
         guard let data = rep.representation(using: .png, properties: [:]) else { throw Error.failedToGeneratePNGImage(representation: rep) }
         try data.write(to: url, options: .atomic)
+    }
+}
+
+extension Processor {
+    /// List of possible errors thrown my the static functions.
+    enum Error: Swift.Error {
+        case failedToCreateMetalDevice
+        case failedToCreateMetalLibrary(device: MTLDevice)
+        case failedToCreateMetalFunction(device: MTLDevice, name: String)
+        case failedToCreateMetalTexture(device: MTLDevice, descriptor: MTLTextureDescriptor)
+        
+        case failedToCreateMetalQueue(device: MTLDevice)
+        case failedToCreateMetalCommandBuffer(device: MTLDevice)
+        case failedToCreateMetalEncoder(device: MTLDevice)
+        
+        case failedToGeneratePNGImage(representation: NSBitmapImageRep)
+        case failedToCreateCGContext
+        case failedToCreateCGImage
     }
 }

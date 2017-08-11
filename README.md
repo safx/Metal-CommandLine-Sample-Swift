@@ -1,14 +1,26 @@
-# Metal-CommandLine-Sample-Swift
+# Metal Command-Line
 
-A sample command line app for compute command of Metal, written in Swift.
+A sample command-line app for Metal compute shaders (written in Swift).
 
 
 ## Compile and Usage
 
-```
-git clone https://github.com/safx/Metal-CommandLine-Sample-Swift.git
-cd Metal-CommandLine-Sample-Swift
-xcodebuild -project Metal-CommandLine-Sample.xcodeproj
-cd build/Release
-./Metal-CommandLine-Sample /path/to/image.jpg
-```
+1. Clone the project
+
+	```bash
+	git clone https://github.com/dehesa/Metal-CLI.git
+	```
+
+2. Build the project
+
+	```bash
+	cd Metal-CLI
+	xcodebuild -project Metal-CLI.xcodeproj
+	```
+
+3. Execute the Command-Line app
+
+	```bash
+	cd build/Release
+	./MetalCLI /absolute/path/to/image.jpg
+	```
