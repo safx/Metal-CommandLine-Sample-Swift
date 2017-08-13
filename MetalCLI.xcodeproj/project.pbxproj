@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6B80C01F3DB2AB00EA810A /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B80BF1F3DB2AB00EA810A /* Processor.swift */; };
 		8D7B20AD1B34438700153EC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B20AC1B34438700153EC6 /* main.swift */; };
 		8D7B20B41B34442600153EC6 /* GrayScale.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B20B31B34442600153EC6 /* GrayScale.metal */; };
 /* End PBXBuildFile section */
@@ -24,7 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8D7B20A91B34438700153EC6 /* Metal-CommandLine-Sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Metal-CommandLine-Sample"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6B80BF1F3DB2AB00EA810A /* Processor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		8D7B20A91B34438700153EC6 /* MetalCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MetalCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7B20AC1B34438700153EC6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8D7B20B31B34442600153EC6 /* GrayScale.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = GrayScale.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,7 +45,7 @@
 		8D7B20A01B34438700153EC6 = {
 			isa = PBXGroup;
 			children = (
-				8D7B20AB1B34438700153EC6 /* Metal-CommandLine-Sample */,
+				8D7B20AB1B34438700153EC6 /* Sample */,
 				8D7B20AA1B34438700153EC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,26 +53,27 @@
 		8D7B20AA1B34438700153EC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D7B20A91B34438700153EC6 /* Metal-CommandLine-Sample */,
+				8D7B20A91B34438700153EC6 /* MetalCLI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D7B20AB1B34438700153EC6 /* Metal-CommandLine-Sample */ = {
+		8D7B20AB1B34438700153EC6 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				8D7B20AC1B34438700153EC6 /* main.swift */,
+				8D6B80BF1F3DB2AB00EA810A /* Processor.swift */,
 				8D7B20B31B34442600153EC6 /* GrayScale.metal */,
 			);
-			path = "Metal-CommandLine-Sample";
+			path = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D7B20A81B34438700153EC6 /* Metal-CommandLine-Sample */ = {
+		8D7B20A81B34438700153EC6 /* MetalCLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D7B20B01B34438700153EC6 /* Build configuration list for PBXNativeTarget "Metal-CommandLine-Sample" */;
+			buildConfigurationList = 8D7B20B01B34438700153EC6 /* Build configuration list for PBXNativeTarget "MetalCLI" */;
 			buildPhases = (
 				8D7B20A51B34438700153EC6 /* Sources */,
 				8D7B20A61B34438700153EC6 /* Frameworks */,
@@ -80,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = "Metal-CommandLine-Sample";
+			name = MetalCLI;
 			productName = "Metal-CommandLine-Sample";
-			productReference = 8D7B20A91B34438700153EC6 /* Metal-CommandLine-Sample */;
+			productReference = 8D7B20A91B34438700153EC6 /* MetalCLI */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +94,7 @@
 		8D7B20A11B34438700153EC6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Safx Developers";
 				TargetAttributes = {
 					8D7B20A81B34438700153EC6 = {
@@ -99,8 +102,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D7B20A41B34438700153EC6 /* Build configuration list for PBXProject "Metal-CommandLine-Sample" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 8D7B20A41B34438700153EC6 /* Build configuration list for PBXProject "MetalCLI" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D7B20A81B34438700153EC6 /* Metal-CommandLine-Sample */,
+				8D7B20A81B34438700153EC6 /* MetalCLI */,
 			);
 		};
 /* End PBXProject section */
@@ -121,8 +124,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7B20AD1B34438700153EC6 /* main.swift in Sources */,
 				8D7B20B41B34442600153EC6 /* GrayScale.metal in Sources */,
+				8D6B80C01F3DB2AB00EA810A /* Processor.swift in Sources */,
+				8D7B20AD1B34438700153EC6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,13 +141,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -164,7 +176,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -180,13 +192,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -201,9 +221,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -211,6 +232,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -218,13 +240,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D7B20A41B34438700153EC6 /* Build configuration list for PBXProject "Metal-CommandLine-Sample" */ = {
+		8D7B20A41B34438700153EC6 /* Build configuration list for PBXProject "MetalCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7B20AE1B34438700153EC6 /* Debug */,
@@ -233,13 +256,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D7B20B01B34438700153EC6 /* Build configuration list for PBXNativeTarget "Metal-CommandLine-Sample" */ = {
+		8D7B20B01B34438700153EC6 /* Build configuration list for PBXNativeTarget "MetalCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D7B20B11B34438700153EC6 /* Debug */,
 				8D7B20B21B34438700153EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
